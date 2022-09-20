@@ -1,0 +1,27 @@
+{
+  "name": "crypto-token-eva",
+  "version": "1.0.0",
+  "description": "ethereum based crypto token EVA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ethereum",
+    "crypto",
+    "token",
+    "ERC20"
+  ],
+  "author": "Hemant Juyal",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
+    "@openzeppelin/contracts": "^4.6.0",
+    "ethers": "^5.6.8",
+    "hardhat": "^2.11.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
