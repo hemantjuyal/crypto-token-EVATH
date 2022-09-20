@@ -138,3 +138,4 @@ cache/
 artifacts/
 test/
 package-lock.json
+config.js
