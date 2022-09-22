@@ -3,8 +3,6 @@
 require("@nomiclabs/hardhat-waffle");
 require('dotenv').config();
 
-console.log('process.env.NETWORK_ENDPOINT_URL ',process.env.NETWORK_ENDPOINT_URL);
-
 module.exports = {
   defaultNetwork: "localhost",
   networks: {
@@ -15,10 +13,10 @@ module.exports = {
     hardhat: {
       chainId: 31337
     },
-    goreli: {
+    polygon_mumbai: {
       url: process.env.NETWORK_ENDPOINT_URL,
       accounts: [process.env.PRIVATE_KEY]
-    },
+    }
   },
   solidity: {
     version: "0.8.4",
