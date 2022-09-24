@@ -24,7 +24,7 @@ contract TokenEva is ERC20, Ownable{
         _mint(msg.sender, toTransactionUnits(amount));
     }
 
-    function getTotalSupply() public view returns (uint256) {
+    function getTotalSupply() public onlyOwner view returns (uint256) {
         return totalSupply();
     }
 
@@ -58,6 +58,12 @@ contract TokenEva is ERC20, Ownable{
         uint256 tokenAmount_ = toTransactionUnits(tokenAmount);
         require(spender != address(0), "invalid receiver. please check");
         return approve(spender, tokenAmount_);
+    }
+
+    function burnTokenForAccount(address account, uint256 tokenAmount) public onlyOwner {
+        uint256 tokenAmount_ = toTransactionUnits(tokenAmount);
+        require(account != address(0), "invalid receiver. please check");
+        return _burn(account, tokenAmount_);
     }
 
 }
